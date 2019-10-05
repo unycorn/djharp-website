@@ -1,18 +1,23 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 
 app.get('/', function (req, res) {
-    res.sendFile("/home/ubuntu/djharp/index.html");
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/next', function (req, res) {
-    res.sendFile("/home/ubuntu/djharp/next.html");
+    res.sendFile(path.join(__dirname, 'next.html'));
+});
+
+app.get('/hoffman', function (req, res) {
+    res.sendFile(path.join(__dirname, 'hoffman.html'));
 });
 
 app.use(express.static("public"));
 
 app.use(function(req, res, next) {
-    res.status(404).sendFile("/home/ubuntu/djharp/404.html");
+    res.status(404).sendFile(path.join(__dirname, '404.html'));
 });
     
 app.listen(80, function () {

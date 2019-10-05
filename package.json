@@ -8,8 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "djharp"
+    "url": "https://github.com/unycorn/djharp-website.git"
   },
   "author": "David Harper",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

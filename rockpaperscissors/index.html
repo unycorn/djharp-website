@@ -1,0 +1,93 @@
+<script>
+// 0 -> rock
+// 1 -> paper
+// 2 -> scissors
+
+var cpuChoice;
+
+function setResults(text) {
+  document.getElementById("results").innerHTML = text;
+}
+function getRandomChoice()
+{
+  min = 0;
+  max = 3;
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+function chooseRock()
+{
+  cpuChoice = getRandomChoice();
+  switch(cpuChoice)
+  {
+    case 0:
+      setResults("Rock!\nIt's a tie!");
+      break;
+    case 1:
+      setResults("Paper!\nYou lost!");
+      break;
+    case 2:
+      setResults("Scissors!\nYou won!");
+      break;
+  }
+}
+function choosePaper()
+{
+  cpuChoice = getRandomChoice();
+  switch(cpuChoice)
+  {
+    case 0:
+      setResults("Rock!\nYou won!!");
+      break;
+    case 1:
+      setResults("Paper!\nIt's a tie!");
+      break;
+    case 2:
+      setResults("Scissors!\nYou lost!");
+      break;
+  }
+}
+function chooseScissors()
+{
+  cpuChoice = getRandomChoice();
+  switch(cpuChoice)
+  {
+    case 0:
+      setResults("Rock!\nYou lost!");
+      break;
+    case 1:
+      setResults("Paper!\nYou won!");
+      break;
+    case 2:
+      setResults("Scissors!\nIt's a tie!");
+      break;
+  }
+}
+</script>
+
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rps.css">
+</head>
+
+<ul>
+  <li><a href="/Website">Home</a></li>
+  <li><a href="/Website/news">News</a></li>
+  <li><a class="active" href="/Website/rockpaperscissors/">Rock Paper Scissors</a></li>
+  <li><a href="/Website/about/">About</a></li>
+</ul>
+
+<div id="content">
+
+  <h1 class="name">
+    Rock Paper Scissors
+  </h1>
+
+  <div class="rps_buttons">
+    <button id="rock" onclick="chooseRock()"></button>
+    <button id="paper" onclick="choosePaper()"></button>
+    <button id="scissors" onclick="chooseScissors()"></button>
+  </div>
+  
+  <h2 id="results"></h2>
+  
+</div>

@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  background-image: url("stone.png");
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #f1f1f1;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    font-size: 20px;
+}
+
+li a:not(.source) {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+li a.active {
+    background-color: #cc7777;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.source {
+  color: #ffdddd;
+  border-radius: 7px;
+  padding: 5px;
+  transition: background-color 1s, color 1s;
+}
+
+.source:hover {
+  color: #aaffff;
+  background-color: gray;
+}
+
+h1 {
+  color: #eedddd;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Helvetica Neue";
+}
+
+p {
+  color: #ffbbbb;
+  font-size: 30px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#home_text {
+  margin-left: 30%;
+  margin-right: 10%;
+  padding: 1px 16px;
+  height: 500px;
+}
+
+#description {
+  margin-top: 20%;
+}
